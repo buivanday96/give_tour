@@ -27,7 +27,7 @@ class TournamentInfoWidget extends StatefulWidget {
   // Size get preferredSize => Size.fromHeight(MediaQuery.of(context).size.height * 2 / 5);
 }
 
-class _TournamentInfoWidgetState extends State<TournamentInfoWidget> {
+class _TournamentInfoWidgetState extends State<TournamentInfoWidget> {  
   int currentRound = 0;
   int totalRound = 30;
 

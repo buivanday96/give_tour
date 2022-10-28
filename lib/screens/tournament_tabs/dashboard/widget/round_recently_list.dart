@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:give_tour_app/widgets/logo_name_widget.dart';
 
-import '../../../../gen/assets.gen.dart';
 import '../../../../widgets/buttons/viewfull_button.dart';
 
 class RoundRecentlyList extends StatelessWidget {
@@ -49,7 +49,7 @@ class RoundRecentlyList extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          _nameLogoTeam(context: context),
+          const LogoNameWidget(),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: Opacity(
@@ -63,32 +63,9 @@ class RoundRecentlyList extends StatelessWidget {
               ),
             ),
           ),
-          _nameLogoTeam(context: context, textDirection: TextDirection.ltr),
-        ],
-      ),
-    );
-  }
-
-  _nameLogoTeam({required BuildContext context, TextDirection textDirection = TextDirection.rtl}) {
-    return Directionality(
-      textDirection: textDirection,
-      child: Row(
-        children: [
-          Assets.images.team.image(height: 20, width: 20),
-          Padding(
-            padding: const EdgeInsets.only(left: 4, right: 4),
-            child: Text(
-              'name'.toUpperCase(),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-                overflow: TextOverflow.ellipsis,
-                color: Theme.of(context).primaryColor,
-                fontSize: 12.5,
-              ),
-            ),
-          ),
+          const LogoNameWidget(
+            textDirection: TextDirection.ltr,
+          )
         ],
       ),
     );

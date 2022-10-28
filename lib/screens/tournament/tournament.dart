@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:give_tour_app/screens/tournament/menu_drawer.dart';
 import 'package:give_tour_app/screens/tournament/tournament_info.dart';
+import 'package:give_tour_app/screens/tournament_tabs/brackets/tournament_bracket.dart';
+import 'package:give_tour_app/screens/tournament_tabs/competitors/tournament_competitor.dart';
 import 'package:give_tour_app/screens/tournament_tabs/dashboard/tournament_dashboard.dart';
+import 'package:give_tour_app/screens/tournament_tabs/standings/tournament_standing.dart';
 import 'package:give_tour_app/widgets/app_bar.dart';
 
 class TournamentScreen extends StatefulWidget {
@@ -14,9 +17,10 @@ class TournamentScreen extends StatefulWidget {
 class _TournamentScreenState extends State<TournamentScreen> with SingleTickerProviderStateMixin {
   final kTabPages = <Widget>[
     const TournamentDashboard(),
-    const Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
-    const Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
-    const Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
+    // const Center(child: Icon(Icons.alarm, size: 64.0, color: Colors.cyan)),
+    const TournamentBracket(),
+    const TournamentStanding(),
+    const TournamentCompetitor(),
     const Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
     const Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),
     // const Center(child: Icon(Icons.forum, size: 64.0, color: Colors.blue)),

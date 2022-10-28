@@ -10,6 +10,12 @@ class MenuDrawer extends StatefulWidget {
 class _MenuDrawerState extends State<MenuDrawer> {
   @override
   Widget build(BuildContext context) {
-    return Drawer();
+    return Drawer(
+      child: Column(
+        children: const [
+          
+        ],
+      ),
+    );
   }
 }

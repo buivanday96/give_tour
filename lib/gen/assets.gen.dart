@@ -19,11 +19,14 @@ class $AssetsImagesGen {
   AssetGenImage get givetourInvert =>
       const AssetGenImage('assets/images/givetour-invert.png');
 
+  /// File path: assets/images/single.png
+  AssetGenImage get single => const AssetGenImage('assets/images/single.png');
+
   /// File path: assets/images/team.png
   AssetGenImage get team => const AssetGenImage('assets/images/team.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [banner, givetourInvert, team];
+  List<AssetGenImage> get values => [banner, givetourInvert, single, team];
 }
 
 class Assets {
